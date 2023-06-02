@@ -1,0 +1,57 @@
+[versions]
+versionCode = "1"
+versionName = "1.0"
+compileSdk = "33"
+minSdk = "21"
+targetSdk = "33"
+
+composeBom = "2023.05.01"
+composeCompiler = "1.4.7"
+ktor = "2.3.1"
+sqlDelight = "2.0.0-alpha05"
+coroutines = "1.6.4"
+koin = "3.4.0"
+lifecycle = "2.6.1"
+androidGradlePlugin = "7.4.1"
+kotlinGradlePlugin = "1.8.21"
+
+[libraries]
+core = { module = "androidx.core:core-ktx", version = "1.10.1" }
+lifecycleViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycleCompose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+activityCompose = { module = "androidx.activity:activity-compose", version = "1.7.2" }
+coilCompose = { module = "io.coil-kt:coil-compose", version = "2.4.0" }
+kermit = { module = "co.touchlab:kermit", version = "1.2.2" }
+kmmViewModelCore = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version = "1.0.0-ALPHA-7" }
+javaxInject = { module = "javax.inject:javax.inject", version = "1" }
+
+composeBom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+composeUi = { module = "androidx.compose.ui:ui" }
+composeUiGraphics = { module = "androidx.compose.ui:ui-graphics" }
+composeUiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview" }
+composeUiTooling = { module = "androidx.compose.ui:ui-tooling" }
+composeMaterial3 = { module = "androidx.compose.material3:material3" }
+
+coroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+ktorClientCore = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktorClientAndroid = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktorClientDarwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktorKotlinxSerializationJson = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktorClientContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+
+sqlDelightAndroidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
+sqlDelightNativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
+sqlDelightCoroutinesExtensions = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
+
+koinCore = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koinAndroid = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koinCompose = { module = "io.insert-koin:koin-androidx-compose", version = "3.4.4" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePlugin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinGradlePlugin" }
+ksp = { id = "com.google.devtools.ksp", version = "1.8.21-1.0.11" }

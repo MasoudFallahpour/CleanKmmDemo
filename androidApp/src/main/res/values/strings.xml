@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Clean KMM Demo</string>
+    <string name="not_available">Not available</string>
+    <string name="name">Name:</string>
+    <string name="description">Description:</string>
+    <string name="successful">Successful:</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="no_rocket_launches">No rocket launches!</string>
+</resources>

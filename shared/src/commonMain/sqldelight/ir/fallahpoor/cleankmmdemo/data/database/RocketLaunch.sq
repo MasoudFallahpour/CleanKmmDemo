@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS RocketLaunchLocalModel(
+    id TEXT NOT NULL COLLATE NOCASE PRIMARY KEY,
+    flightNumber INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT,
+    successful INTEGER,
+    imageUrl TEXT
+);
+
+getLaunches:
+SELECT * FROM RocketLaunchLocalModel ORDER BY flightNumber DESC;
+
+saveLaunch:
+INSERT INTO RocketLaunchLocalModel VALUES ?;
+
+deleteLaunches:
+DELETE FROM RocketLaunchLocalModel;
