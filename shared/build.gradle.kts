@@ -1,10 +1,10 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    kotlin("plugin.serialization") version "1.8.21"
-    id("app.cash.sqldelight") version "2.0.0-alpha05"
-    id("com.google.devtools.ksp") version "1.8.21-1.0.11"
-    id("com.rickclephas.kmp.nativecoroutines") version "1.0.0-ALPHA-8"
+    kotlin("plugin.serialization") version "1.9.21"
+    id("app.cash.sqldelight") version "2.0.1"
+    id("com.google.devtools.ksp") version "1.9.21-1.0.15"
+    id("com.rickclephas.kmp.nativecoroutines") version "1.0.0-ALPHA-22"
 }
 
 sqldelight {
@@ -16,10 +16,10 @@ sqldelight {
 }
 
 kotlin {
-    android {
+    androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = JavaVersion.VERSION_1_8.toString()
+                jvmTarget = JavaVersion.VERSION_11.toString()
             }
         }
     }
@@ -85,6 +85,7 @@ kotlin {
         }
         all {
             languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
         }
     }
 }
@@ -94,5 +95,9 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }

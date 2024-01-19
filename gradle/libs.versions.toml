@@ -1,29 +1,28 @@
 [versions]
 versionCode = "1"
 versionName = "1.0"
-compileSdk = "33"
+compileSdk = "34"
 minSdk = "21"
-targetSdk = "33"
+targetSdk = "34"
 
-composeBom = "2023.05.01"
-composeCompiler = "1.4.7"
-ktor = "2.3.1"
-sqlDelight = "2.0.0-alpha05"
-coroutines = "1.6.4"
-koin = "3.4.0"
-lifecycle = "2.6.1"
-androidGradlePlugin = "7.4.1"
-kotlinGradlePlugin = "1.8.21"
+composeBom = "2023.10.01"
+composeCompiler = "1.5.7"
+ktor = "2.3.7"
+sqlDelight = "2.0.1"
+coroutines = "1.7.3"
+koin = "3.5.3"
+lifecycle = "2.6.2"
+androidGradlePlugin = "8.2.1"
+kotlinGradlePlugin = "1.9.21"
 
 [libraries]
-core = { module = "androidx.core:core-ktx", version = "1.10.1" }
+core = { module = "androidx.core:core-ktx", version = "1.12.0" }
 lifecycleViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycleCompose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
-activityCompose = { module = "androidx.activity:activity-compose", version = "1.7.2" }
+activityCompose = { module = "androidx.activity:activity-compose", version = "1.8.2" }
 coilCompose = { module = "io.coil-kt:coil-compose", version = "2.4.0" }
 kermit = { module = "co.touchlab:kermit", version = "1.2.2" }
-kmmViewModelCore = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version = "1.0.0-ALPHA-7" }
-javaxInject = { module = "javax.inject:javax.inject", version = "1" }
+kmmViewModelCore = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version = "1.0.0-ALPHA-16" }
 
 composeBom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 composeUi = { module = "androidx.compose.ui:ui" }
@@ -33,7 +32,6 @@ composeUiTooling = { module = "androidx.compose.ui:ui-tooling" }
 composeMaterial3 = { module = "androidx.compose.material3:material3" }
 
 coroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-coroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 
 ktorClientCore = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktorClientAndroid = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
@@ -54,4 +52,4 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePlugin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinGradlePlugin" }
-ksp = { id = "com.google.devtools.ksp", version = "1.8.21-1.0.11" }
+ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.15" }
