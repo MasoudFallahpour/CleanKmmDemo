@@ -1,4 +1,4 @@
-This is a basic [KMM](https://kotlinlang.org/lp/mobile/) demo app. It displays the list of SpaceX rocket launches.
+This is a basic [KMP](https://www.jetbrains.com/kotlin-multiplatform/) demo project consisting of an Android and an iOS app. The apps display the list of SpaceX rocket launches.
 
 ## Functionality
 
@@ -7,16 +7,16 @@ rocket launches. It reads the data from a REST API if Internet is connected, oth
 
 ## Goals
 
-The most important goal for me was to get more familiar with KMM by building a KMM app from scratch.
+The most important goal for me was to get more familiar with KMP by building a KMP app from scratch.
 
-The second goal was to have a kind of blueprint for a typical KMM app that is implemented in a clean and scalable
+The second goal was to have a kind of blueprint for a typical KMP app that is implemented in a clean and scalable
 way using the latest technologies and best practices.
 
 ## Components/Modules
 
 * `androidApp`: an Android application module containing the UI part of the Android app.
 * `iosApp`: an iOS application that contains the UI part of the iOS app.
-* `shared`: a KMM module that contains the shared code between the Android and iOS apps.
+* `shared`: a KMP module that contains the shared code between the Android and iOS apps.
 
 Everything except the UI implementation is shared between the Android and iOS apps.
 
