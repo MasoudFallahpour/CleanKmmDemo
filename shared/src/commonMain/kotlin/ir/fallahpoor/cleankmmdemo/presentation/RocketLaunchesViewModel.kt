@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-class RocketLaunchesViewModel constructor(
+class RocketLaunchesViewModel(
     private val getRocketLaunchesUseCase: GetRocketLaunchesUseCase
 ) : KMMViewModel() {
 
@@ -41,7 +41,8 @@ class RocketLaunchesViewModel constructor(
         }
     }
 
-    private fun shouldFetchRocketLaunches(): Boolean = _uiState.value !is RocketLaunchesScreenUiState.Success
+    private fun shouldFetchRocketLaunches(): Boolean =
+        _uiState.value !is RocketLaunchesScreenUiState.Success
 
     private fun mapToRocketLaunchesScreenUiState(result: UseCaseResult<GetRocketLaunchesUseCase.Output>): RocketLaunchesScreenUiState =
         when (result) {
