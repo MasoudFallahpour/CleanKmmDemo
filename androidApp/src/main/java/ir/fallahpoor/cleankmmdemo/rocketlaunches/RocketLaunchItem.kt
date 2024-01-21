@@ -1,6 +1,10 @@
 package ir.fallahpoor.cleankmmdemo.rocketlaunches
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
@@ -16,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import ir.fallahpoor.cleankmmdemo.R
 import ir.fallahpoor.cleankmmdemo.domain.model.RocketLaunch
+import ir.fallahpoor.cleankmmdemo.theme.CleanKmmDemoTheme
 import ir.fallahpoor.cleankmmdemo.theme.Space
 
 @Composable
@@ -26,7 +31,8 @@ fun RocketLaunchItem(modifier: Modifier = Modifier, rocketLaunch: RocketLaunch) 
     ) {
         Column {
             LaunchImage(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .height(200.dp)
                     .clip(RoundedCornerShape(topEnd = Space.NORMAL, topStart = Space.NORMAL)),
                 imageUrl = rocketLaunch.imageUrl
@@ -114,17 +120,36 @@ private fun LaunchResult(modifier: Modifier = Modifier, successful: Boolean?) {
     }
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 private fun RocketLaunchItemPreview() {
-    RocketLaunchItem(
-        rocketLaunch = RocketLaunch(
-            id = "1",
-            name = "launch name",
-            flightNumber = 1,
-            description = "here is some sample description",
-            successful = true,
-            imageUrl = "some image url here"
+    CleanKmmDemoTheme {
+        RocketLaunchItem(
+            rocketLaunch = RocketLaunch(
+                id = "1",
+                name = "Launch name",
+                flightNumber = 1,
+                description = "Here is some sample description",
+                successful = true,
+                imageUrl = "Some image url here"
+            )
         )
-    )
+    }
+}
+
+@Preview(uiMode = android.content.res.Configuration.UI_MODE_NIGHT_YES)
+@Composable
+private fun RocketLaunchItemPreviewDark() {
+    CleanKmmDemoTheme {
+        RocketLaunchItem(
+            rocketLaunch = RocketLaunch(
+                id = "1",
+                name = "Launch name",
+                flightNumber = 1,
+                description = "Here is some sample description",
+                successful = true,
+                imageUrl = "Some image url here"
+            )
+        )
+    }
 }
