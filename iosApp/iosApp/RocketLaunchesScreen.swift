@@ -9,11 +9,12 @@ struct RocketLaunchesScreen: View {
         ZStack {
             Colors.background.ignoresSafeArea()
             let uiState: RocketLaunchesScreenUiState = viewModel.uiState
-            if let successUiState = uiState as? RocketLaunchesScreenUiState.Success {
+            switch uiState {
+            case let successUiState as RocketLaunchesScreenUiState.Success:
                 RocketLaunches(rocketLaunches: successUiState.rocketLaunches)
-            } else if let errorUiState = uiState as? RocketLaunchesScreenUiState.Error {
+            case let errorUiState as RocketLaunchesScreenUiState.Error:
                 Text(errorUiState.message)
-            } else {
+            default:
                 ProgressView()
             }
         }.onAppear {
