@@ -6,7 +6,7 @@ struct RocketLaunches: View {
 
     var body: some View {
         if rocketLaunches.isEmpty {
-            Text("No rocket launches!")
+            Text(Strings.noRocketLaunches)
         } else {
             List(rocketLaunches, id: \.id) { rocketLaunch in
                 RocketLaunchItem(rocketLaunch: rocketLaunch)

@@ -6,4 +6,5 @@ class Strings {
     static let name = "Name"
     static let description = "Description"
     static let successful = "Successful"
+    static let noRocketLaunches = "No rocket launches!"
 }

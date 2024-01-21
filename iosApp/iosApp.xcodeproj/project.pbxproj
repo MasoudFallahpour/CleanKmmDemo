@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -100,11 +100,11 @@
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
-				058557D7273AAEEB004C7B11 /* Preview Content */,
 				7555FF82242A565900829871 /* RocketLaunchesScreen.swift */,
 				A5DB92782A2CCAE700CE9A53 /* RocketLaunches.swift */,
 				A5DB927A2A2CCCAA00CE9A53 /* RocketLaunchItem.swift */,
 				A5B1E3AE2A361B5D00E10FD2 /* KMMViewModel.swift */,
+				058557D7273AAEEB004C7B11 /* Preview Content */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
