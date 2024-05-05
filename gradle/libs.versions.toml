@@ -5,22 +5,22 @@ compileSdk = "34"
 minSdk = "21"
 targetSdk = "34"
 
-composeBom = "2023.10.01"
-composeCompiler = "1.5.7"
-ktor = "2.3.7"
-sqlDelight = "2.0.1"
-coroutines = "1.7.3"
-koin = "3.5.3"
-lifecycle = "2.6.2"
-androidGradlePlugin = "8.2.1"
-kotlinGradlePlugin = "1.9.21"
+composeBom = "2024.05.00"
+composeCompiler = "1.5.13"
+ktor = "2.3.10"
+sqlDelight = "2.0.2"
+coroutines = "1.8.0"
+koin = "3.5.6"
+lifecycle = "2.7.0"
+androidGradlePlugin = "8.2.2"
+kotlinGradlePlugin = "1.9.23"
 
 [libraries]
-core = { module = "androidx.core:core-ktx", version = "1.12.0" }
+core = { module = "androidx.core:core-ktx", version = "1.13.1" }
 lifecycleViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycleCompose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
-activityCompose = { module = "androidx.activity:activity-compose", version = "1.8.2" }
-coilCompose = { module = "io.coil-kt:coil-compose", version = "2.4.0" }
+activityCompose = { module = "androidx.activity:activity-compose", version = "1.9.0" }
+coilCompose = { module = "io.coil-kt:coil-compose", version = "2.6.0" }
 kermit = { module = "co.touchlab:kermit", version = "1.2.2" }
 kmmViewModelCore = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version = "1.0.0-ALPHA-16" }
 
@@ -52,4 +52,4 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePlugin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlinGradlePlugin" }
-ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.15" }
+ksp = { id = "com.google.devtools.ksp", version = "1.9.23-1.0.20" }
