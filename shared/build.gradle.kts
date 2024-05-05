@@ -1,9 +1,9 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    kotlin("plugin.serialization") version "1.9.23"
-    id("app.cash.sqldelight") version "2.0.2"
-    id("com.google.devtools.ksp") version "1.9.23-1.0.20"
+    kotlin("plugin.serialization") version (libs.versions.kotlin.get())
+    id("app.cash.sqldelight") version (libs.versions.sqlDelight.get())
+    id("com.google.devtools.ksp") version (libs.versions.ksp.get())
     id("com.rickclephas.kmp.nativecoroutines") version "1.0.0-ALPHA-22"
 }
 
